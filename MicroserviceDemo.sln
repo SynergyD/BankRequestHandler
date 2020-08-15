@@ -1,0 +1,58 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "RequestReceiver", "RequestReceiver", "{895D31E2-595B-461F-BFE0-D62CE106C1B1}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "RequestHandler", "RequestHandler", "{CFD0C35E-FABF-4D4F-A2B2-69FD7F6D635D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RequestReceiver.WebApi", "RequestReceiver.WebApi\RequestReceiver.WebApi.csproj", "{8ADD6A4A-5CB5-450C-8A9C-7EDE31636820}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RequestHandler.DataAccess", "RequestHandler.DataAccess\RequestHandler.DataAccess.csproj", "{73C27261-7C05-4D55-AA00-A1876061CE27}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RequestReceiver.Messaging.Send", "RequestReceiver.Messaging.Send\RequestReceiver.Messaging.Send.csproj", "{0336C316-4E22-4D62-A05D-4B1BE4F7D052}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RequestReceiver.Common", "RequestReceiver.Common\RequestReceiver.Common.csproj", "{344CCD68-8DE8-410C-910E-ABA888E2BB05}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RequestHandler.Messaging.Receive", "RequestHandler.Messaging.Receive\RequestHandler.Messaging.Receive.csproj", "{3CAD979E-C892-4D0E-889F-88BC6889B815}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RequestHandler", "RequestHandler\RequestHandler.csproj", "{F52ECEFD-2D13-4ABE-A3D8-758F24F4E2EF}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{8ADD6A4A-5CB5-450C-8A9C-7EDE31636820} = {895D31E2-595B-461F-BFE0-D62CE106C1B1}
+		{73C27261-7C05-4D55-AA00-A1876061CE27} = {CFD0C35E-FABF-4D4F-A2B2-69FD7F6D635D}
+		{0336C316-4E22-4D62-A05D-4B1BE4F7D052} = {895D31E2-595B-461F-BFE0-D62CE106C1B1}
+		{344CCD68-8DE8-410C-910E-ABA888E2BB05} = {895D31E2-595B-461F-BFE0-D62CE106C1B1}
+		{3CAD979E-C892-4D0E-889F-88BC6889B815} = {CFD0C35E-FABF-4D4F-A2B2-69FD7F6D635D}
+		{F52ECEFD-2D13-4ABE-A3D8-758F24F4E2EF} = {CFD0C35E-FABF-4D4F-A2B2-69FD7F6D635D}
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{8ADD6A4A-5CB5-450C-8A9C-7EDE31636820}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8ADD6A4A-5CB5-450C-8A9C-7EDE31636820}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8ADD6A4A-5CB5-450C-8A9C-7EDE31636820}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8ADD6A4A-5CB5-450C-8A9C-7EDE31636820}.Release|Any CPU.Build.0 = Release|Any CPU
+		{73C27261-7C05-4D55-AA00-A1876061CE27}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{73C27261-7C05-4D55-AA00-A1876061CE27}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{73C27261-7C05-4D55-AA00-A1876061CE27}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{73C27261-7C05-4D55-AA00-A1876061CE27}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0336C316-4E22-4D62-A05D-4B1BE4F7D052}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0336C316-4E22-4D62-A05D-4B1BE4F7D052}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0336C316-4E22-4D62-A05D-4B1BE4F7D052}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0336C316-4E22-4D62-A05D-4B1BE4F7D052}.Release|Any CPU.Build.0 = Release|Any CPU
+		{344CCD68-8DE8-410C-910E-ABA888E2BB05}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{344CCD68-8DE8-410C-910E-ABA888E2BB05}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{344CCD68-8DE8-410C-910E-ABA888E2BB05}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{344CCD68-8DE8-410C-910E-ABA888E2BB05}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3CAD979E-C892-4D0E-889F-88BC6889B815}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3CAD979E-C892-4D0E-889F-88BC6889B815}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3CAD979E-C892-4D0E-889F-88BC6889B815}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3CAD979E-C892-4D0E-889F-88BC6889B815}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F52ECEFD-2D13-4ABE-A3D8-758F24F4E2EF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F52ECEFD-2D13-4ABE-A3D8-758F24F4E2EF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F52ECEFD-2D13-4ABE-A3D8-758F24F4E2EF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F52ECEFD-2D13-4ABE-A3D8-758F24F4E2EF}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
