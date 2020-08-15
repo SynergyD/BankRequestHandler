@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 using System.Data;
 using System.Linq;
@@ -5,6 +6,7 @@ using System.Text;
 using Dapper;
 using Npgsql;
 using RequestHandler.DataAccess.Entities;
+using RequestHandler.DataAccess.Enums;
 
 namespace RequestHandler.DataAccess.Repositories
 {
@@ -14,6 +16,11 @@ namespace RequestHandler.DataAccess.Repositories
         
         public int Save(Request request)
         {
+            
+            Array values = Enum.GetNames(typeof(Status));
+            Random random = new Random();
+            request.Status = (string)values.GetValue(random.Next(1, values.Length));
+            
             using IDbConnection dbConnection = new NpgsqlConnection(ConnectionString);
             
             return dbConnection.ExecuteScalar<int>(SqlToInsertRequest(request).ToString());

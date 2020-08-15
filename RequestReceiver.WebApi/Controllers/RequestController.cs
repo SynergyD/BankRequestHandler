@@ -25,8 +25,11 @@ namespace RequestReceiver.WebApi.Controllers
             if (ModelState.IsValid)
             {
                 request.IpAddress = _accessor.ActionContext.HttpContext.Connection.RemoteIpAddress.ToString();
+
+                var result = _requestSender.CallAsync(request).Result;
             
-                return Ok(_requestSender.CallAsync(request).Result);
+                _requestSender.Close();
+                return Ok(result);
             }
 
             return BadRequest();
@@ -35,7 +38,10 @@ namespace RequestReceiver.WebApi.Controllers
         [HttpGet("{id}")]
         public ActionResult<RequestDto> GetRequestById(int id)
         {
-            return Ok(_requestSender.CallAsync(id).Result);
+            var result = _requestSender.CallAsync(id).Result;
+            
+            _requestSender.Close();
+            return Ok(result);
         }
         
         [HttpGet("{clientId}/{departmentAddress}")]
@@ -46,8 +52,11 @@ namespace RequestReceiver.WebApi.Controllers
                 Id = clientId,
                 DepartmentAddress = departmentAddress
             };
+
+            var result = _requestSender.CallAsync(requestByClient).Result;
             
-            return Ok(_requestSender.CallAsync(requestByClient).Result);
+            _requestSender.Close();
+            return Ok(result);
         }
         
     }

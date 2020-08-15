@@ -6,6 +6,7 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.OpenApi.Models;
+using RequestReceiver.Common.Validation;
 using RequestReceiver.Messaging.Send;
 
 namespace RequestReceiver.WebApi
@@ -26,7 +27,7 @@ namespace RequestReceiver.WebApi
             services.AddTransient<IRequestSenderRpc, RequestSenderRpc>();
             
             
-            services.AddMvc().AddFluentValidation();
+            services.AddMvc().AddFluentValidation(fv => fv.RegisterValidatorsFromAssemblyContaining<RequestValidator>());
             services.AddControllers();
             services.AddSingleton<IActionContextAccessor, ActionContextAccessor>();
             services.AddSwaggerGen(c =>

@@ -7,7 +7,6 @@ using Microsoft.Extensions.Options;
 using Newtonsoft.Json;
 using RabbitMQ.Client;
 using RabbitMQ.Client.Events;
-using RequestReceiver.Common.Models;
 
 namespace RequestReceiver.Messaging.Send
 {
@@ -63,8 +62,6 @@ namespace RequestReceiver.Messaging.Send
             return tcs.Task;
         }
         
-        
-
         public void Close() => _connection.Close();
 
         private void OnReceived(object model, BasicDeliverEventArgs ea)
